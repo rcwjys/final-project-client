@@ -30,7 +30,6 @@ const response = async () => {
 
     await sendToDashboard(data);
   } catch (err) {
-    await pool.query("ROLLBACK");
     console.log("failed to send image to roboflow model: ", err.message);
     return;
   }

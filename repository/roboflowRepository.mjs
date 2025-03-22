@@ -34,6 +34,7 @@ const bulkInsertToPhase = async (insertedValue) => {
 
     await pool.query("COMMIT");
   } catch (err) {
+    await pool.query("ROLLBACK");
     throw err;
   }
 };
