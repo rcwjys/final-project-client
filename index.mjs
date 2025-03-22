@@ -1,6 +1,8 @@
 import response from "./usecase/request.mjs";
 import "dotenv/config";
 
-(async () => {
+const start = async () => {
   await response();
-})();
+};
+
+start();
